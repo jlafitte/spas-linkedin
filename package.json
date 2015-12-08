@@ -1,0 +1,27 @@
+{
+  "name": "spas-linkedin",
+  "description": "LinkedIn API helpers for SPAS",
+  "version": "0.0.1",
+  "author": {
+    "name": "John Lafitte",
+    "email": "john.lafitte@gmail.com",
+    "url": "https://github.com/jlafitte"
+  },
+  "keywords": [
+    "spas",
+    "little-spas",
+    "proxy",
+    "cache",
+    "api",
+    "linkedin"
+  ],
+  "dependencies": {
+    "request": "2.x",
+    "cheerio": "*",
+    "spas-http": "0.1.x"
+  },
+  "main": "./api.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  }
+}
