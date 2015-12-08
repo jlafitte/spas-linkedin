@@ -6,7 +6,14 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 exports.companyScrape = function(params, credentials, cb){
-  request(params.url, function(err, response, body) {
+  var options = {
+    "url": params.url,
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3"
+    }
+  };
+
+  request(options, function(err, response, body) {
     var $ = cheerio.load(body);
     var items = [];
     $('li.feed-item').each(function(idx,li){
